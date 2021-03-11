@@ -1,0 +1,10 @@
+
+data api:
+
+import requests
+import json
+# request data from api
+response = requests.get("https://covidmap.umd.edu/api/resources?indicator=covid&type=smoothed&country=Afghanistan&daterange=20200424-20200426").text
+​
+#convert json data to dic data for use!
+jsonData = json.loads(response)
